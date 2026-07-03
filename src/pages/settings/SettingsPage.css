@@ -1,0 +1,54 @@
+.settings-page-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: 100%;
+}
+
+.settings-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+  border-bottom: 1.5px solid var(--border-color);
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+/* Audit logs visual timelines */
+.audit-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: relative;
+  padding-left: var(--space-4);
+}
+
+.audit-timeline::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 4px;
+  width: 2px;
+  background-color: var(--border-color);
+}
+
+.audit-log-node {
+  position: relative;
+  background-color: var(--color-surface-hover);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.audit-log-node::before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: 14px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-surface);
+}

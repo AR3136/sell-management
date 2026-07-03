@@ -1,0 +1,87 @@
+.login-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.login-card-content__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.login-card-content__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.login-card-content__subtitle {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+}
+
+.login-card-content__alert {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-danger-light);
+  border: 1px solid rgba(229, 62, 62, 0.2);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-danger);
+}
+
+.login-card-content__alert-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.login-card-content__alert-text {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.login-form__pwd-toggle {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-1);
+  transition: color var(--transition-fast);
+}
+
+.login-form__pwd-toggle:hover {
+  color: var(--text-primary);
+}
+
+.login-form__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-form__tip {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.login-form__forgot-link {
+  font-size: var(--font-size-sm);
+  color: var(--color-accent);
+  transition: color var(--transition-fast);
+}
+
+.login-form__forgot-link:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}

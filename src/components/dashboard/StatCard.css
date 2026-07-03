@@ -1,0 +1,95 @@
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-card__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.stat-card__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-card__title {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+}
+
+.stat-card__value {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.stat-card__icon-wrapper {
+  padding: var(--space-3);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Color configs */
+.stat-card__icon-wrapper--primary {
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
+}
+.stat-card__icon-wrapper--success {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+}
+.stat-card__icon-wrapper--warning {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning);
+}
+.stat-card__icon-wrapper--danger {
+  background-color: var(--color-danger-light);
+  color: var(--color-danger);
+}
+.stat-card__icon-wrapper--info {
+  background-color: var(--color-info-light);
+  color: var(--color-info);
+}
+
+/* Trend elements styling */
+.stat-card__trend {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--space-2);
+}
+
+.stat-card__trend-icon {
+  font-size: 14px;
+}
+
+.stat-card__trend-icon--up,
+.stat-card__trend-text--up {
+  color: var(--color-success);
+}
+
+.stat-card__trend-icon--down,
+.stat-card__trend-text--down {
+  color: var(--color-danger);
+}
+
+.stat-card__trend-icon--neutral,
+.stat-card__trend-text--neutral {
+  color: var(--text-secondary);
+}

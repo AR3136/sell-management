@@ -1,0 +1,124 @@
+.tabs-container {
+  display: flex;
+  gap: var(--space-2);
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: var(--space-4);
+  width: 100%;
+}
+
+.tab-btn {
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tab-btn:hover {
+  color: var(--color-accent);
+}
+
+.tab-btn--active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-6);
+}
+
+.role-template-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.role-template-card__permissions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.perm-row {
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--space-1) 0;
+}
+
+.perm-row:last-child {
+  border-bottom: none;
+}
+
+.form-section-title {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--color-primary-light);
+  border-left: 3.5px solid var(--color-accent);
+  padding-left: var(--space-2);
+}
+
+/* Permission Matrix table layouts */
+.permission-matrix-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.matrix-row {
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--space-2) 0;
+}
+
+.matrix-row:last-child {
+  border-bottom: none;
+}
+
+.checkbox-permissions-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.matrix-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  padding: var(--space-1) var(--space-2);
+  background-color: var(--color-bg);
+  border-radius: var(--border-radius-sm);
+  transition: background-color var(--transition-fast);
+  user-select: none;
+}
+
+.matrix-checkbox-label input {
+  cursor: pointer;
+}
+
+.matrix-checkbox-label:hover {
+  background-color: var(--border-color);
+}
+
+@media (max-width: 576px) {
+  .matrix-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+  .checkbox-permissions-group {
+    width: 100%;
+    gap: var(--space-1);
+  }
+  .matrix-checkbox-label {
+    flex: 1 1 calc(50% - var(--space-1));
+    justify-content: center;
+  }
+  .tab-btn {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-sm);
+  }
+}

@@ -1,0 +1,123 @@
+.module-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 100%;
+}
+
+.module-page__header {
+  margin-bottom: var(--space-1);
+}
+
+.module-page__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.module-page__subtitle {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+}
+
+.module-page__table-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.module-page__filters {
+  border-bottom: 1.5px solid var(--border-color);
+  padding-bottom: var(--space-4);
+}
+
+/* Ensure Search is visible on module tables */
+.module-page__filters .topnav__search {
+  display: flex !important;
+}
+
+/* Form Grid layout helpers */
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-4);
+}
+
+.form-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-3);
+}
+
+.border-box-reference {
+  background-color: var(--color-surface-hover);
+  border: 1px dashed var(--color-info);
+  padding: var(--space-4);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.attachment-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Company details viewing card */
+.company-view-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.company-view-details__header h2 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.company-view-details__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.company-view-details__sec {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.company-view-details__sec h3 {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  border-bottom: 1.5px solid var(--border-color);
+  padding-bottom: 4px;
+  color: var(--color-primary-light);
+}
+
+.attachment-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.attachment-badge span.material-icons {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 576px) {
+  .module-page__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+}
