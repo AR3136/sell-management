@@ -2,6 +2,12 @@
   background: var(--color-surface);
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg) !important;
 }
 
 /* Padding variants */
