@@ -366,22 +366,22 @@ export default function ApproachedPage() {
                 </tr>
               ) : (
                 paginatedCompanies.map((c) => (
-                  <tr key={c.id} style={{ cursor: 'pointer' }} onClick={() => handleOpenView(c)}>
-                    <td><span className="font-semibold">{c.id}</span></td>
-                    <td><div className="font-bold color-primary">{c.name}</div></td>
-                    <td>
+                  <tr key={c.id}>
+                    <td onClick={() => handleOpenView(c)} style={{ cursor: 'pointer' }}><span className="font-semibold">{c.id}</span></td>
+                    <td onClick={() => handleOpenView(c)} style={{ cursor: 'pointer' }}><div className="font-bold color-primary">{c.name}</div></td>
+                    <td onClick={() => handleOpenView(c)} style={{ cursor: 'pointer' }}>
                       <div className="flex flex-col">
                         <span>{c.contactPerson}</span>
                         <span className="text-sm text-muted">{c.designation}</span>
                       </div>
                     </td>
-                    <td><Badge variant="primary">{c.industry}</Badge></td>
-                    <td>
+                    <td onClick={() => handleOpenView(c)} style={{ cursor: 'pointer' }}><Badge variant="primary">{c.industry}</Badge></td>
+                    <td onClick={() => handleOpenView(c)} style={{ cursor: 'pointer' }}>
                       <Badge variant={c.approachType === 'We Approached Them' ? 'info' : 'success'}>
                         {c.approachType}
                       </Badge>
                     </td>
-                    <td>{c.date}</td>
+                    <td onClick={() => handleOpenView(c)} style={{ cursor: 'pointer' }}>{c.date}</td>
                     <td>
                       <div className="flex gap-2">
                         <Button
